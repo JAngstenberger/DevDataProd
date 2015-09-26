@@ -1,0 +1,17 @@
+{
+    "contents" : "#' Prepare Data Table\n#' \n#' @param dt data.table\n#' @param cars character vector\n#' @return data.table\n#'\n\ncreate_dt_cars <- function(dt, cars) {\n        \n        prepared <- select(dt, one_of(cars))\n}",
+    "created" : 1443081446458.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1678768615",
+    "id" : "42EA8BEE",
+    "lastKnownWriteTime" : 1443099513,
+    "path" : "~/R/Shiny Developing Data Products/Developing Data Products Project/helper.R",
+    "project_path" : "helper.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

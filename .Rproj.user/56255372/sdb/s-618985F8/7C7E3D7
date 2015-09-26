@@ -1,0 +1,16 @@
+{
+    "contents" : "\n# This is the user-interface definition of a Shiny web application.\n# You can find out more about building applications with Shiny here:\n# \n# http://www.rstudio.com/shiny/\n#\n\nlibrary(shiny)\nlibrary(rCharts)\n\nshinyUI(\n        navbarPage(\"Motor Trend Car Road Tests\",\n                   tabPanel(\"Analysis\",\n                            sidebarPanel(\n                                uiOutput(\"carsControls\"),\n                                actionButton(inputId = \"clear_all\", label = \"Clear selection\", icon = icon(\"check-square\")),\n                                actionButton(inputId = \"select_all\", label = \"Select all\", icon = icon(\"check-square-o\"))),\n                            mainPanel(\n                                    tabsetPanel(\n                                            \n                                            # Density Plot\n                                            tabPanel(p(icon(\"area-chart\"), \"Density Plot\"),\n                                                        h4(\"Distribution of Gas Milage\", align = \"center\"),\n                                                        plotOutput(\"distribGasMilage\")\n                                            ),\n                                            \n                                            # BoxPlot\n                                            tabPanel(p(icon(\"bar-chart\"), \"Box Plot\"),\n                                                     h4(\"Mileage by Gear Number\", align = \"center\"),\n                                                     plotOutput(\"BoxPlot\")\n                                            ),\n                                            \n                                            # Regression\n                                            tabPanel(p(icon(\"bar-chart\"), \"Regression\"),\n                                                     h4(\"Regression of MPG on Weight\", align = \"center\"),\n                                                     plotOutput(\"Regression\")\n                                            ),\n                                            \n                                            # Data \n                                            tabPanel(p(icon(\"table\"), \"Data\"),\n                                                     dataTableOutput(outputId=\"dt.cars\")\n                                            )))),\n                   \n                   tabPanel(\"About\",\n                            mainPanel(\n                                    includeMarkdown(\"About.Rmd\")))\n                   \n        ))\n",
+    "created" : 1443105895607.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "385575047",
+    "id" : "7C7E3D7",
+    "lastKnownWriteTime" : 1443263633,
+    "path" : "~/R/Shiny Developing Data Products/Developing Data Products Project/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

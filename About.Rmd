@@ -1,0 +1,39 @@
+---
+title: "About"
+author: "Jonas"
+date: "Tuesday, September 22, 2015"
+output: html_document
+---
+
+## Motor Trend Car Road Tests Application
+   
+-----------------    
+
+This shiny application is based on the R dataset __mtcars__ which was extracted from the 1974 _Motor Trend_ US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973–-74 models).
+   
+----------------   
+
+The Format of the data frame with its 32 observations on 11 variables is as follows:   
+   
+Variable  |  Description
+------------|------------
+__cmod__  |  Car Models   
+__mpg__  |  Miles/(US) gallon   
+__cyl__  |  Number of cylinders   
+__disp__  |  Displacement (cu.in.)   
+__hp__  |  Gross horsepower   
+__drat__  |  Rear axle ratio   
+__wt__  |  Weight (lb/1000)   
+__qsec__  |  1/4 mile time   
+__vs__  |  V/S   
+__am__  |  Transmission (0 = automatic, 1 = manual)   
+__gear__  |  Number of forward gears   
+__carb__  |  Number of carburetors   
+
+----------------
+
+The Source of this data set is:   
+
+Henderson and Velleman (1981), Building multiple regression models interactively. Biometrics, __37__, 391–411.
+
+

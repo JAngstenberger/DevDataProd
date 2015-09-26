@@ -1,0 +1,16 @@
+{
+    "contents" : "---\ntitle: \"About\"\nauthor: \"Jonas\"\ndate: \"Tuesday, September 22, 2015\"\noutput: html_document\n---\n\n## Motor Trend Car Road Tests Application\n   \n-----------------    \n\nThis shiny application is based on the R dataset __mtcars__ which was extracted from the 1974 _Motor Trend_ US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973–-74 models).\n   \n----------------   \n\nThe Format of the data frame with its 32 observations on 11 variables is as follows:   \n   \nVariable  |  Description\n------------|------------\n__cmod__  |  Car Models   \n__mpg__  |  Miles/(US) gallon   \n__cyl__  |  Number of cylinders   \n__disp__  |  Displacement (cu.in.)   \n__hp__  |  Gross horsepower   \n__drat__  |  Rear axle ratio   \n__wt__  |  Weight (lb/1000)   \n__qsec__  |  1/4 mile time   \n__vs__  |  V/S   \n__am__  |  Transmission (0 = automatic, 1 = manual)   \n__gear__  |  Number of forward gears   \n__carb__  |  Number of carburetors   \n\n----------------\n\nThe Source of this data set is:   \n\nHenderson and Velleman (1981), Building multiple regression models interactively. Biometrics, __37__, 391–411.\n\n\n",
+    "created" : 1443105902392.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1584971176",
+    "id" : "97E88147",
+    "lastKnownWriteTime" : 1443264077,
+    "path" : "~/R/Shiny Developing Data Products/Developing Data Products Project/About.Rmd",
+    "project_path" : "About.Rmd",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_markdown"
+}

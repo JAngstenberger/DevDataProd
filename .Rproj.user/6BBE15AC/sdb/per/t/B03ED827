@@ -1,0 +1,16 @@
+{
+    "contents" : "\n# This is the server logic for a Shiny web application.\n# You can find out more about building applications with Shiny here:\n#\n# http://shiny.rstudio.com\n#\n\nlibrary(shiny)\n\n# Plotting \nlibrary(ggplot2)\nlibrary(rCharts)\nlibrary(ggvis)\n\n# Data processing libraries\nlibrary(data.table)\nlibrary(reshape2)\nlibrary(dplyr)\n\n# Required by includeMarkdown\nlibrary(markdown)\n\n# It has to loaded to plot ggplot maps on shinyapps.io\n# library(mapproj)\n# library(maps)\n\n# Load helper functions\nsource(\"helper.R\", local = TRUE)\n\n# Data Table\ndt <- mtcars\ncars <- sort(unique(row.names(dt)))\n\nshinyServer(function(input, output, session) {\n        \n        # Define and initialize reactive values\n        values <- reactiveValues()\n        values$cars <- cars\n        \n        # Create cars checkbox\n        output$carsControls <- renderUI({\n                checkboxGroupInput(\"cars\", \"Car Brands\", cars, selected=values$cars)\n        })\n        \n        # Add observers on clear and select all buttons\n        observe({\n                if(input$clear_all == 0) return()\n                values$cars <- c()\n        })\n        \n        observe({\n                if(input$select_all == 0) return()\n                values$cars <- cars\n        })\n        \n        # Prepare data table\n        dt.cars <- reactive({\n                dt\n                #prepared <- select(dt, one_of(input$cars))\n#                 create_dt_cars(dt, input$cars)\n        })\n        \n        # Render data table and create download handler\n        output$table <- renderDataTable(\n                {dataTable()})\n\n        output$downloadData <- downloadHandler(\n                filename = 'data.csv',\n                        content = function(file) {\n                        write.csv(dataTable(), file)\n        }\n)\n\n  })\n",
+    "created" : 1442917090171.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "731434641",
+    "id" : "B03ED827",
+    "lastKnownWriteTime" : 1443103064,
+    "path" : "~/R/Shiny Developing Data Products/Developing Data Products Project/server.R",
+    "project_path" : "server.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

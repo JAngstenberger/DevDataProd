@@ -1,0 +1,16 @@
+{
+    "contents" : "\n# This is the user-interface definition of a Shiny web application.\n# You can find out more about building applications with Shiny here:\n# \n# http://www.rstudio.com/shiny/\n#\n\nlibrary(shiny)\n\n# Fix tag(\"div\", list(...)) : could not find function \"showOut… \nlibrary(rCharts)\n\nshinyUI(\n        navbarPage(\"Motor Trend Car Road Tests\",\n                   tabPanel(\"Plot\",\n                            sidebarPanel(\n                                uiOutput(\"carsControls\"),\n                                actionButton(inputId = \"clear_all\", label = \"Clear selection\", icon = icon(\"check-square\")),\n                                actionButton(inputId = \"select_all\", label = \"Select all\", icon = icon(\"check-square-o\"))),\n                            mainPanel(\n                                    tabsetPanel(\n                                            # Density Plot\n                                            tabPanel(p(icon(\"area-chart\"), \"Density Plot\")\n#                                                      showOutput(\"distribGasMilage\", \"nvd3\")\n                                            ),\n                                            \n                                            # Time series data\n                                            tabPanel(p(icon(\"bar-chart\"), \"Histogram\")\n#                                                      showOutput(\"histogram\",\"nvd3\")\n                                            ),\n                                            \n                                            \n                                            \n                                            # Data \n                                            tabPanel(p(icon(\"table\"), \"Data\"),\n                                                     dataTableOutput(outputId=\"dt.cars\"),\n                                                     downloadButton('downloadData', 'Download')\n                                            )))),\n                   \n                   tabPanel(\"About\",\n                            mainPanel(\n                                    includeMarkdown(\"About.md\")))\n                   \n        ))\n",
+    "created" : 1443098257868.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3107416861",
+    "id" : "8B27B165",
+    "lastKnownWriteTime" : 1443100398,
+    "path" : "~/R/Shiny Developing Data Products/Developing Data Products Project/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
